@@ -1,0 +1,132 @@
+:root {
+    --main-color: #00004D;
+    --second-color: #1A1AFF;
+    --form-container-color: #d9d9d9;
+    --bg-color: #E6E5F2;
+}
+
+.form-container form {
+    color: black;
+}
+
+h1 {
+    color: var(--main-color, #00004D);
+    font-size: 50px;
+    text-shadow: 2px 2px 2px var(--main-color, #00004D);
+    padding: 10px;
+    font-weight: normal;
+
+}
+
+.container {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.form-container {
+
+    width: 100%;
+    background-color: var(--form-container-color, #d9d9d9);
+    overflow-y: auto;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    color: #000;
+
+}
+
+.form-container label {
+    color: black;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="url"],
+.form-container select {
+    width: 90%;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+}
+
+.form-container input[type="text"] {
+    width: 90%;
+    color: #000;
+}
+
+.form-container select {
+    width: 93%;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    background-color: #fff;
+
+}
+
+.form-container select,
+.form-container select option {
+    color: #000;
+}
+
+.form-container select option:checked {
+    color: black;
+}
+
+select option {
+    color: #000;
+    font-size: 20px;
+    padding: 5px;
+}
+
+select:invalid {
+    color: gray;
+}
+
+select selected {
+    color: black;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button[type="button"] {
+    background-color: var(--second-color, #1A1AFF);
+    color: #000;
+}
+
+button[type="button"]:hover {
+    background-color: transparent;
+    color: var(--second-color, #1A1AFF);
+}
+
+button[type="submit"] {
+    background-color: var(--main-color, #00004D);
+    color: #fff;
+}
+
+button[type="submit"]:hover {
+    background-color: transparent;
+    color: var(--main-color, #00004D);
+
+}
