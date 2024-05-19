@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import axios from "axios";
+import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  //   const addLocallyData = () => {
+  //     const url = `https://back-end-iwii.onrender.com/addLocallyData`;
+  //     axios
+  //       .post(url)
+  //       .then((response) => {
+  //         console.log(response);
+  //       })
+  //       .catch((err) => {
+  //         console.log(err);
+  //       });
+  //   };
+  // return (
+  //   <><button onClick={addLocallyData}>ADD DATA</button></>
+  // );
 }
 
 export default App;

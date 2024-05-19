@@ -7,7 +7,7 @@ function Category({ category }) {
   const [isLoading, setIsLoading] = useState(true);
 
   const getCardsByCategory = () => {
-    const serverURL = `http://localhost:3004/getCards/${category}`;
+    const serverURL = `https://back-end-iwii.onrender.com/getCards/${category}`;
     axios
       .get(serverURL)
       .then((response) => {

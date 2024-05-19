@@ -5,7 +5,7 @@ import axios from "axios";
 function Card({ isUpdate, clickedCard }) {
 
   const updateFavorite = () => {
-    const url = `http://localhost:3004/updateFavorite/${clickedCard.id}`;
+    const url = `https://back-end-iwii.onrender.com/updateFavorite/${clickedCard.id}`;
     const data = {
       is_fav: isUpdate,
     };
