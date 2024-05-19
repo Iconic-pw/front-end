@@ -15,22 +15,20 @@ h1 {
     text-shadow: 2px 2px 2px var(--main-color, #00004D);
     padding: 10px;
     font-weight: normal;
-
 }
 
 .container {
-    width: 60%;
     display: flex;
+    width: 80%;
     justify-content: center;
     align-items: center;
     padding: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 5%;
+    margin-bottom: 5%;
     color: #000;
 }
 
 .form-container {
-
     width: 100%;
     background-color: var(--form-container-color, #d9d9d9);
     overflow-y: auto;
@@ -38,7 +36,6 @@ h1 {
     margin-bottom: 20px;
     border-radius: 10px;
     color: #000;
-
 }
 
 .form-container label {
@@ -55,21 +52,12 @@ h1 {
     border: 1px solid #ccc;
     padding: 8px 12px;
     margin-bottom: 10px;
-}
-
-.form-container input[type="text"] {
-    width: 90%;
     color: #000;
 }
 
 .form-container select {
     width: 93%;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-    padding: 8px 12px;
-    margin-bottom: 10px;
     background-color: #fff;
-
 }
 
 .form-container select,
@@ -82,7 +70,6 @@ h1 {
 }
 
 select option {
-    color: #000;
     font-size: 20px;
     padding: 5px;
 }
@@ -98,7 +85,6 @@ select selected {
 .button-container {
     display: flex;
     justify-content: flex-end;
-
 }
 
 button {
@@ -111,13 +97,13 @@ button {
 }
 
 button[type="button"] {
-    background-color: var(--second-color, #1A1AFF);
+    background-color: var(--form-container-color, #d9d9d9);
     color: #000;
 }
 
 button[type="button"]:hover {
-    background-color: transparent;
-    color: var(--second-color, #1A1AFF);
+    background-color: var(--second-color, #1A1AFF);
+    color: black;
 }
 
 button[type="submit"] {
@@ -128,5 +114,4 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: transparent;
     color: var(--main-color, #00004D);
-
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import Footer from './footer/Footer.js';
-import Form from './form/Form.js';
+import Footer from './componant/footer/Footer';
+import Form from './componant/form/Form';
 
 
 
