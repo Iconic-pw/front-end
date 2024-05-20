@@ -1,7 +1,29 @@
 import './AboutUs.css'
 import logo from '../../images/logo light.png'
+import axios from "axios";
+ import { useState, useEffect } from "react";
 
 export default function AboutUs() {
+    const [ourData, setOurData] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+  
+    const getOurData = () => {
+      const serverURL = `https://back-end-iwii.onrender.com/getOurCards`;
+      axios
+        .get(serverURL)
+        .then((response) => {
+          setOurData(response.data);
+          setIsLoading(false);
+        })
+        .catch((error) => {
+          console.log(error);
+          setIsLoading(false);
+        });
+    };
+  
+    useEffect(() => {
+      getOurData();
+    }, []);
     return (<>
         <div className='section-1'>
             {/* <p><p className='first-word'>iconic,</p> where you can easily view and explore a diverse collection of business cards, showcasing the unique identities of professionals and businesses</p> */}

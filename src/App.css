@@ -54,3 +54,7 @@ main {
   font-family: "Akshar";
   text-transform: capitalize;
 }
+  
+  to {
+    transform: rotate(360deg);
+  }
