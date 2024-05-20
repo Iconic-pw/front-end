@@ -1,39 +1,26 @@
 import React, { useState } from 'react';
+import logo from "../../images/logo light.png";
 import './Navbar.css';
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
-    const [isNavOpen, setIsNavOpen] = useState(false);
-
-    const toggleNav = () => {
-        setIsNavOpen(!isNavOpen);
-    };
-
     return (
-        <nav className="navbar">
-            <a href="/" className="logo"></a>
-            <div className="menu-icon" onClick={toggleNav}>
-                &#9776;
-            </div>
-            <div className={`inner-nav ${isNavOpen ? 'active' : ''}`}>
-                <NavLink href="#Home">Home</NavLink>
-                <NavLink href="#Favorite">Favorite</NavLink>
-                <NavLink href="#Form">Form</NavLink>
-                <Dropdown title="Category">
-                    <a href="#">Programming</a>
-                    <a href="#">Digital Marketing</a>
-                    <a href="#">Visual Arts</a>
+        <nav>
+            <a className="logo"><img src = {logo}/></a>
+            <div className="inner-nav ">
+                <NavLink to="/">Home</NavLink>
+                <NavLink to="/favorite">Favorite</NavLink>
+                <NavLink to="/form">Form</NavLink>
+                <Dropdown title="Category ˅" >
+                    <NavLink to="/programming" >Programming</NavLink>
+                    <NavLink to="/marketing" >Digital marketing</NavLink>
+                    <NavLink to="/visual arts" >Visual arts</NavLink>
                 </Dropdown>
-                <NavLink href="#About us">About Us</NavLink>
+                <NavLink to="/about">About us</NavLink>
             </div>
         </nav>
     );
 };
-
-const NavLink = ({ href, children }) => (
-    <a href={href} className="nav-link">
-        {children}
-    </a>
-);
 
 const Dropdown = ({ title, children }) => {
     const [isOpen, setIsOpen] = useState(false);

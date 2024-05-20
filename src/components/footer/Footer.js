@@ -7,7 +7,7 @@ import location from '../../images/icons/Location.png'
 export default function Footer() {
     return (
         <footer>
-            <div class="container">
+            <div class="footer-container">
                 <div class="footer-column left-col">
 
                     <img class="logo" src={lightLogo}alt="logo" />

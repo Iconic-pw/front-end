@@ -44,7 +44,7 @@ export default function AboutUs() {
         </div>
         <div className='section-3'>
             <p className='title'>about us</p>
-            <p className='description'>We are Iconic, a diverse team of five innovators driven by a groundbreaking idea to revolutionize the world of business cards. Our mission is to modernize networking by making it simple for professionals to create, share, and manage business cards online. By offering a sleek, digital alternative to traditional paper cards, we aim to enhance the way people connect and make lasting impressions in the digital age. </p>
+            <p className='description'>We are Iconic, a diverse team of five innovators driven by a groundbreaking idea to revolutionize the world of business cards. Our mission is to modernize networking by making it simple for professionals to create, share, and manage business cards online. By offering a sleek, digital alternative to traditional paper cards, we aim to enhance the way people connect and make lasting impressions in the digital age.</p>
         </div>
         <div className='section-4'>
             <p className='title'>our team members </p>

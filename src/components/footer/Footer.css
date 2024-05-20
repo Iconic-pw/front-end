@@ -1,4 +1,6 @@
 footer {
+    display: flex;
+    justify-content: center;
     background: var(--footerColor, #00004D);
     height: fit-content;
     color:white;
@@ -6,7 +8,8 @@ footer {
     margin: 0;
 }
 
-.container {
+.footer-container {
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
