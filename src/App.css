@@ -3,18 +3,19 @@
   padding: 0;
   font-family: 'Akshar', 'sans-serif';
   font-size: 16px;
-  color: white;
+  color: rgb(4, 4, 4);
   scroll-behavior: smooth;
 }
 
 :root {
   --main-color: #00004D;
   --second-color: #1A1AFF;
-  --bg_color: #E6E5F2;
+  --form-container-color: #fff;
+  --bg_color: #F2F4F5;
 }
 
 body {
-  background: var(--bg_color, #E6E5F2);
+  background: var(--bg_color,#F2F4F5);
   font-family: 'Akshar', ' sans-serif';
   margin: 0;
   padding: 0;

@@ -1,10 +1,3 @@
-:root {
-    --main-color: #00004D;
-    --second-color: #1A1AFF;
-    --form-container-color: #d9d9d9;
-    --bg-color: #E6E5F2;
-}
-
 .form-container form {
     color: black;
 }
@@ -19,7 +12,7 @@ h1 {
 
 .container {
     display: flex;
-    width: 80%;
+    width: 60%;
     justify-content: center;
     align-items: center;
     padding: 10px;
@@ -30,9 +23,10 @@ h1 {
 
 .form-container {
     width: 100%;
-    background-color: var(--form-container-color, #d9d9d9);
+    /* background-color: var(--form-container-color, #d9d9d9); */
+    background-color: white;
     overflow-y: auto;
-    padding: 5px;
+    padding: 20px;
     border-radius: 10px;
     color: #000;
 }
@@ -98,6 +92,7 @@ button {
 button[type="button"] {
     background-color: transparent;
     color: #000;
+    border: solid 1px var(--main-color, #00004D);
 }
 
 button[type="button"]:hover {

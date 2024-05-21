@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
 import Footer from './componant/footer/Footer';
-import Form from './componant/form/Form';
+//import Form from './componant/form/Form';
 import Navbar from './componant/navbar/Navbar';
+import Admin from './componant/Admin/Admin';
 
 
 
@@ -12,8 +13,10 @@ function App() {
     <>
 
       <div class="content">
+
         <Navbar />
-        <Form />
+        <Admin />
+        {/* <Form /> */}
         <Footer />
       </div>
 

@@ -1,0 +1,15 @@
+.category {
+    padding: 50px 50px;
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.spinner-border {
+    width: 100px;
+    border-width: 10px;
+    color: var(--footerColor);
+    height: 100px;
+}
