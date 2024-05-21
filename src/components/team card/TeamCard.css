@@ -9,7 +9,6 @@
     flex-direction: column;
     height: calc(3957x * 0.1);
     width: calc(3495px * 0.1); 
-    background-image: url("../../images/about\ card/body.png");
     background-size: 100% calc(3495px * 0.1);
 
 }
@@ -34,7 +33,6 @@
     height: fit-content;
     width: calc(3495px * 0.1); 
     height: 320px;
-    background-image: url('../../images/about card/border.png');
     padding-bottom: 400px;
     background-size: 100% calc(5479px * 0.1);
     background-repeat: no-repeat;
@@ -62,7 +60,6 @@
     /* height: fit-content; */
     width: calc(3495px * 0.1); 
     /* height: 320px; */
-    background-image: url('../../images/about card/border.png');
     padding-bottom: 400px;
     background-size: 100% calc(5479px * 0.1);
     background-repeat: no-repeat;

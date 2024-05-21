@@ -16,7 +16,7 @@ function Category({ category }) {
       .then((response) => {
         setCategories(response.data);
         setIsLoading(false);
-        console.log("here: ",response.data);
+        console.log("here: ", response.data);
       })
       .catch((error) => {
         console.log(error);
@@ -28,15 +28,21 @@ function Category({ category }) {
     getCardsByCategory();
   }, [category]);
 
-  return (<div className="category">
-    {
-      isLoading && <Spinner animation="border"/>
-    }
-    {
-      !isLoading && categories.map(obj=><EmpCard isUpdate={true} clickedCard={obj}/>)
-    }
-    {/* <EmpCard /> */}
-  </div>);
+  return (
+    <div>
+      <p className="category-title">{category}</p>
+
+      <div className="category">
+        {
+          isLoading && <Spinner animation="border" />
+        }
+        {
+          !isLoading && categories.map(obj => <EmpCard isUpdate={true} clickedCard={obj} />)
+        }
+        {/* <EmpCard /> */}
+      </div>
+    </div>
+  );
 }
 
 export default Category;
