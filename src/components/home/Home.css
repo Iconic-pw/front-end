@@ -21,17 +21,20 @@
 .upper-main > p {
     color: white;
     width: 50%;
+    text-transform: lowercase;
     font-size: 40px;
     font-weight: 300;
     word-spacing: 5px;
 }
 
 .first-word {
+    text-transform: capitalize;
     display: inline;
     font-weight: 500;
 }
 
 .lower-main {
+    text-transform: none;
     margin-top: 70px;
     display: flex;
     flex-direction: column;

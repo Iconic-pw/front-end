@@ -11,14 +11,14 @@ function Home() {
                 <img src={light} />
             </div>
             <div className='lower-main'>
-                <p>what we provide</p>
+                <p>What we provide</p>
                 <div className='boxes'>
                     <div className='box'>
                         <img src={searchImage} />
-                        <p>searching jobs</p></div>
+                        <p>Searching jobs</p></div>
                     <div className='box'>
                         <img src={employeeImage} />
-                        <p>finding employees</p></div>
+                        <p>Finding employees</p></div>
                 </div>
             </div>
         </>

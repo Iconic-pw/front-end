@@ -34,10 +34,10 @@ function Category({ category }) {
 
       <div className="category">
         {
-          isLoading && <Spinner animation="border" />
+          isLoading && <Spinner className="my-spinner" animation="border" />
         }
         {
-          !isLoading && categories.map(obj => <EmpCard isUpdate={true} clickedCard={obj} />)
+          !isLoading && categories.map(obj => <EmpCard isFavorite={false} clickedCard={obj} />)
         }
         {/* <EmpCard /> */}
       </div>

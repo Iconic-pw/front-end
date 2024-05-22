@@ -2,13 +2,14 @@
     padding: 50px 50px;
     display: flex;
     flex-grow: 1;
+    gap:40px;
     flex-wrap: wrap;
     margin: 0 auto;
     justify-content:center;
     align-items:center; 
 }
 
-.spinner-border {
+.my-spinner {
     width: 100px;
     border-width: 10px;
     color: var(--footerColor);

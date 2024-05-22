@@ -86,6 +86,34 @@ select selected {
     justify-content: flex-end;
 }
 
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: var(--footerFontColor);
+    color: white;
+    border-radius: 5px;
+    margin:0 20px;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.custom-file-upload:hover {
+    background-color: var(--footerColor);
+    color: white;
+}
+
+#fileName {
+    margin-left: 10px;
+    display: inline;
+    color: black;
+    font-size: 20px;
+}
+
+
 button {
     padding: 10px 20px;
     border: none;

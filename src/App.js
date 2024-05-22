@@ -8,21 +8,22 @@ import Navbar from './components/navbar/Navbar.js'
 import Form from './components/form/Form.js'
 import { Routes, Route } from "react-router-dom";
 import Category from './components/category/Category.js';
+import Favorite from './components/favorite/Favorite.js';
 
 function App() {
   return (
     <>
     <Navbar/>
       <main>
-        {/* <AboutUs/> */}
+        {/* <TeamCard/> */}
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/favorite" element={<Favorite />} />
           <Route path="/form" element={<Form/>}/>
           <Route path="/about" element={<AboutUs/>}/>
           <Route path="/programming" element={<Category category={"programming"}/>} />
           <Route path="/marketing" element={<Category category={"visual arts"}/>} />
           <Route path="/visual arts" element={<Category category={"digital marketing"}/>}/>
-
         </Routes>
         {/* <TeamCard/> */}
           {/* <EmpCard/> */}

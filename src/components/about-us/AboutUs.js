@@ -1,7 +1,9 @@
 import './AboutUs.css'
 import logo from '../../images/logo light.png'
 import axios from "axios";
- import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
+import TeamCard from '../team card/TeamCard.js';
 
 export default function AboutUs() {
     const [ourData, setOurData] = useState([]);
@@ -24,12 +26,13 @@ export default function AboutUs() {
     useEffect(() => {
       getOurData();
     }, []);
+
     return (<>
         <div className='section-1'>
             {/* <p><p className='first-word'>iconic,</p> where you can easily view and explore a diverse collection of business cards, showcasing the unique identities of professionals and businesses</p> */}
             <span><img src={logo} /><p>team</p><p className='sign'>&copy;</p></span>
             <div className='paragraph'>We are revolutionizing the way professionals connect. Join us in embracing the future of networking and creating lasting impressions in the digital age!</div>
-            <button className='join-button'>Join us Now</button>
+            <Link to="/form"><button className='join-button'>Join us Now</button></Link>
         </div>
         <div className='section-2'>
             <p className='title'>mission & vision</p>
@@ -48,6 +51,13 @@ export default function AboutUs() {
         </div>
         <div className='section-4'>
             <p className='title'>our team members </p>
+            <div className='team-cards'>
+                <TeamCard/>
+                <TeamCard/>
+                <TeamCard/>
+                <TeamCard/>
+                <TeamCard/>
+            </div>
         </div>
     </>
     )

@@ -97,11 +97,8 @@ span>p {
 }
 
 .boxes {
-    /* margin: 0 auto; */
     width: 100%;
     height: 400px;
-    /* height: fit-content; */
-
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
@@ -140,6 +137,7 @@ span>p {
 }
 
 .section-3 {
+    margin-top: 70px;
     background-color: var(--homeBoxColor);
     padding: 20px 0 ;
 }
@@ -158,5 +156,20 @@ span>p {
 }
 
 .section-4 {
-    
+    margin: 100px 0;
+}
+
+.section-4 > .title {
+    margin-bottom: 60px;
+}
+
+.team-cards {
+    width: 90%;
+    display: flex;
+    gap: 70px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+    /* align-items:flex-start; */
+    /* align-content:center; */
 }

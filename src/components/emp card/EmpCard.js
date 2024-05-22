@@ -9,35 +9,35 @@ import { click } from '@testing-library/user-event/dist/click';
 import { json } from 'react-router-dom';
 import { useState } from "react";
 // import emp_card from '/home/zaid/project-week/front-end/src/images/emp_card.png'
-export default function EmpCard({ isUpdate, clickedCard }) {
+export default function EmpCard({ isFavorite, clickedCard }) {
 
   const [flag, setFlag] = useState(false);
   const [message, setMessage] = useState('');
   const [heading, setheading] = useState('');
 
-  const updateFavorite = () => {
-    const url = `https://back-end-iwii.onrender.com/updateFavorite/${clickedCard.id}`;
-    const data = {
-      is_fav: isUpdate,
-    };
-    axios
-      .put(url, data)
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
+  // const updateFavorite = () => {
+  //   const url = `https://back-end-iwii.onrender.com/updateFavorite/${clickedCard.id}`;
+  //   const data = {
+  //     is_fav: isUpdate,
+  //   };
+  //   axios
+  //     .put(url, data)
+  //     .then((response) => {
+  //       console.log(response);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // }
 
+  const key = 'favs';
 
   const saveToLocalStorage = () => {
-    const key = 'favs';
     const sucessMessage = "Card marked as favorite successfully"
     const errorMessage = "Card already added to favorite"
     const sucessHeading = "Done"
     const errorHeading = "Failed"
-    function save(data) {localStorage.setItem(key, JSON.stringify(data));}
+    function save(data) { localStorage.setItem(key, JSON.stringify(data)); }
     let result = localStorage.getItem(key);
     // debugger;
     if (result == null) {
@@ -59,11 +59,18 @@ export default function EmpCard({ isUpdate, clickedCard }) {
     setFlag(true);
   }
 
+  const deleteCard = () => {
+    let result = JSON.parse(localStorage.getItem(key));
+    const updatedData = result.filter(obj => obj.id !== clickedCard.id);
+    localStorage.setItem(key, JSON.stringify(updatedData));
+    window.location.reload();
+  }
+
   const handleCloseModal = () => {
     setFlag(false);
   };
 
-  return (<>
+  return (<div className="emp-card">
     <div className="first-layer" style={{ backgroundImage: `url(${clickedCard.img})` }}>
       <div className="second-layer">
         <div className="text">
@@ -74,10 +81,15 @@ export default function EmpCard({ isUpdate, clickedCard }) {
         </div>
         <div class='emp-buttons'>
           <a href={clickedCard.portfolio}><img class='linkedin-icon' src={linkedinIcon} /></a>
-          <button onClick={saveToLocalStorage}>Add to favorite</button>
+          {
+            !isFavorite && <button className="add-to-favorite-btn" onClick={saveToLocalStorage}>Add to favorite</button>
+          }
+          {
+           isFavorite && <button className="delete-from-favorite-btn" onClick={deleteCard}>Delete</button> 
+          }
         </div>
       </div>
     </div>
     <MyModal show={flag} onHide={handleCloseModal} message={message} heading={heading} />
-  </>)
+  </div>)
 }
