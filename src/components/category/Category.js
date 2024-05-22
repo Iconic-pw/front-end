@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import './Category.css'
-import EmpCard from "../emp card/EmpCard.JS";
+// import EmpCard from "../emp card/EmpCard";
 import Spinner from 'react-bootstrap/Spinner';
 
 function Category({ category }) {
@@ -28,15 +28,21 @@ function Category({ category }) {
         getCardsByCategory();
     }, [category]);
 
-    return (<div className="category">
-        {
-            isLoading && <Spinner animation="border" />
-        }
-        {
-            !isLoading && categories.map(obj => <EmpCard isUpdate={true} clickedCard={obj} />)
-        }
-        {/* <EmpCard /> */}
-    </div>);
+    return (
+        <div>
+            <p className="category-title">{category}</p>
+
+            <div className="category">
+                {
+                    isLoading && <Spinner animation="border" />
+                }
+                {
+                    !isLoading && categories.map(obj => <EmpCard isUpdate={true} clickedCard={obj} />)
+                }
+                {/* <EmpCard /> */}
+            </div>
+        </div>
+    );
 }
 
 export default Category;

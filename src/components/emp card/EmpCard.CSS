@@ -1,0 +1,93 @@
+.first-layer {
+    height: 500px;
+    width: 320px;
+    background-image: url('../../images/test.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: flex;
+    align-self: flex-start;
+    margin: 0 10px 20px;
+    border-radius: 65px;
+    -webkit-border-radius: 65px;
+    -moz-border-radius: 65px;
+    -ms-border-radius: 65px;
+    -o-border-radius: 65px;
+}
+
+.second-layer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    padding-left: 57px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: url('../../images/emp_card.png');
+    background-size: 100% 100%;
+
+}
+
+.text {
+    font-family: "Akshar";
+    padding: 0 10px;
+    margin-top: 240px;
+    width: fit-content;
+    width: -moz-fit-content;
+    height: fit-content !important;
+    height: 100px;
+    left: 68px;
+    border-left: 10px dotted var(--yellowColor);
+}
+
+.card-name {
+    font-size: 30px;
+    /* text-align: center; */
+    text-transform: capitalize;
+    background: linear-gradient(to right, var(--footerColor), var(--footerFontColor));
+    background: -webkit-linear-gradient(left, var(--footerColor), var(--footerFontColor));
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* Standard syntax */
+    -webkit-text-fill-color: transparent;
+    /* For Safari and older versions of Chrome */
+    font-weight: 500;
+}
+
+.job-title {
+    font-size: 22px;
+    color: var(--footerFontColor);
+}
+
+.level {
+    color: var(--footerFontColor);
+    font-size: 20px;
+}
+
+.card-name,
+.job-title,
+.level {
+    width: 220px;
+    margin: 0 auto;
+    word-break: break-word;
+}
+
+.emp-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.emp-buttons>button {
+    background-color: var(--footerFontColor);
+    padding: 5px 15px;
+    font-size: 20px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.linkedin-icon {
+    width: 50px;
+}
