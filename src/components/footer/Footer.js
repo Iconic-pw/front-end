@@ -3,8 +3,7 @@ import lightLogo from '../../images/logo light.png'
 import phone from '../../images/icons/Phone.png'
 import mail from '../../images/icons/mail.png'
 import location from '../../images/icons/Location.png'
-
-export default function Footer() {
+function Footer() {
     return (
         <footer>
             <div class="footer-container">
