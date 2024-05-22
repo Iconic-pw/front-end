@@ -3,24 +3,24 @@ import logo from "../../images/logo light.png";
 import './Navbar.css';
 import { NavLink } from "react-router-dom";
 
-const Navbar = () => {
+function Navbar() {
     return (
         <nav>
-            <a className="logo"><img src = {logo}/></a>
-            <div className="inner-nav ">
+            <a className="logo"><img src={logo} alt="Logo" /></a>
+            <div className="inner-nav">
                 <NavLink to="/">Home</NavLink>
                 <NavLink to="/favorite">Favorite</NavLink>
                 <NavLink to="/form">Form</NavLink>
-                <Dropdown title="Category ˅" >
-                    <NavLink to="/programming" >Programming</NavLink>
-                    <NavLink to="/marketing" >Digital marketing</NavLink>
-                    <NavLink to="/visual arts" >Visual arts</NavLink>
+                <Dropdown title="Category ˅">
+                    <NavLink to="/programming">Programming</NavLink>
+                    <NavLink to="/marketing">Digital marketing</NavLink>
+                    <NavLink to="/visual arts">Visual arts</NavLink>
                 </Dropdown>
                 <NavLink to="/about">About us</NavLink>
             </div>
         </nav>
     );
-};
+}
 
 const Dropdown = ({ title, children }) => {
     const [isOpen, setIsOpen] = useState(false);

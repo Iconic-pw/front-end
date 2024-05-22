@@ -1,38 +1,38 @@
 import './AboutUs.css'
 import logo from '../../images/logo light.png'
 import axios from "axios";
- import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 export default function AboutUs() {
     const [ourData, setOurData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-  
+
     const getOurData = () => {
-      const serverURL = `https://back-end-iwii.onrender.com/getOurCards`;
-      axios
-        .get(serverURL)
-        .then((response) => {
-          setOurData(response.data);
-          setIsLoading(false);
-        })
-        .catch((error) => {
-          console.log(error);
-          setIsLoading(false);
-        });
+        const serverURL = `https://back-end-iwii.onrender.com/getOurCards`;
+        axios
+            .get(serverURL)
+            .then((response) => {
+                setOurData(response.data);
+                setIsLoading(false);
+            })
+            .catch((error) => {
+                console.log(error);
+                setIsLoading(false);
+            });
     };
-  
+
     useEffect(() => {
-      getOurData();
+        getOurData();
     }, []);
     return (<>
         <div className='section-1'>
             {/* <p><p className='first-word'>iconic,</p> where you can easily view and explore a diverse collection of business cards, showcasing the unique identities of professionals and businesses</p> */}
-            <span><img src={logo} /><p>team</p><p className='sign'>&copy;</p></span>
+            <span><img src={logo} /><p>team</p><p className='sign'>&copy;</p></span><br />
             <div className='paragraph'>We are revolutionizing the way professionals connect. Join us in embracing the future of networking and creating lasting impressions in the digital age!</div>
             <button className='join-button'>Join us Now</button>
         </div>
         <div className='section-2'>
-            <p className='title'>mission & vision</p>
+            <p className='title'>mission and vision</p>
             <div className='boxes'>
                 <div className='mision'>
                     <div className='box-title'>our mision</div>
@@ -49,6 +49,7 @@ export default function AboutUs() {
         <div className='section-4'>
             <p className='title'>our team members </p>
         </div>
+      
     </>
     )
 }

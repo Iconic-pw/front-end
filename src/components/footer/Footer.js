@@ -10,12 +10,10 @@ export default function Footer() {
             <div class="footer-container">
                 <div class="footer-column left-col">
 
-                    <img class="logo" src={lightLogo}alt="logo" />
+                    <img class="logo" src={lightLogo} alt="logo" />
 
-                    <h3>About Us</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
-                        Sed nec augue ut ex blandit malesuada quis
-                        eget ipsum.</p>
+
+                    <p>Your First Chance to Be Iconic</p>
                 </div>
                 <div class="footer-column right-col">
                     <div class="footer-right-top">

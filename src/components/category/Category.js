@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import './Category.css'
-import EmpCard from "../emp card/EmpCard";
+// import EmpCard from "../emp card/EmpCard";
 import Spinner from 'react-bootstrap/Spinner';
 
 function Category({ category }) {
@@ -36,9 +36,9 @@ function Category({ category }) {
         {
           isLoading && <Spinner animation="border" />
         }
-        {
+        {/* {
           !isLoading && categories.map(obj => <EmpCard isUpdate={true} clickedCard={obj} />)
-        }
+        } */}
         {/* <EmpCard /> */}
       </div>
     </div>

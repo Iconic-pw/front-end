@@ -13,14 +13,14 @@ body {
 }
 
 :root {
-  --favoriteButtonBorderRadius:10px;
-  --cardBorderRadius:30px;
-  --waveHeight:50px;
-  --backgroundColor:#E6E5F2;
-  --homeBoxColor: #4646ff;
-  --footerColor:#00004D;
-  --footerFontColor:#1A1AFF;
-  --yellowColor:#EBE645;
+  --favoriteButtonBorderRadius: 10px;
+  --cardBorderRadius: 30px;
+  --waveHeight: 50px;
+  --backgroundColor: #f2f4f5;
+  --homeBoxColor: #3b82f6;
+  --footerColor: #1e3a8a;
+  --footerFontColor: #adcffa;
+  --yellowColor: #ffc727;
 }
 
 #root {

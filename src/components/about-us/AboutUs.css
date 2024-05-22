@@ -3,8 +3,8 @@
 }
 
 .section-1 {
-    background-image: url("../../images/about us background.png");
-    padding-top: 2%;
+    background-image: url("../../images/bg-about\ us.png");
+    padding-top: 4%;
     display: flex;
     box-sizing: border-box;
     flex-direction: column;
@@ -15,11 +15,12 @@
     background-size: cover;
     background-size: 120% 80%;
     font-weight: 300;
-    padding-bottom: 0;;
+    padding-bottom: 0;
+
 }
 
-.section-1 > * {
-    margin-bottom: 25px;
+.section-1>* {
+    margin-bottom: 20px;
 }
 
 span {
@@ -34,34 +35,37 @@ span>img {
 }
 
 .sign {
-    font-size: 30px;
+    font-size: 20px;
     margin-top: -10px;
 }
 
 span>p {
-    font-size: 70px;
+    font-size: 40px;
     margin: 10px 0 0;
 }
 
 .paragraph {
     text-transform: none;
-    width: 60%;
-    font-size: 33px;
+    width: 40%;
+    font-size: 20px;
+    text-align: center;
+
 }
 
 .join-button {
-    margin-top: 40px;
-    color: black;
+    margin-top: 20px;
+    color: var(--footerColor);
     background-color: var(--yellowColor);
-    font-family: inherit;
+    font-family: Akshar;
     border: none;
-    padding: 0 50px;
-    font-size: 50px;
-    border-radius: 35px;
-    -webkit-border-radius: 35px;
-    -moz-border-radius: 35px;
-    -ms-border-radius: 35px;
-    -o-border-radius: 35px;
+    padding: 10px 15px;
+    font-size: 35px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20 px;
+    box-shadow: 4px 4px 4px var(--backgroundColor);
 }
 
 .join-button:hover {
@@ -70,11 +74,13 @@ span>p {
     -moz-transition: 0.2s;
     -ms-transition: 0.2s;
     -o-transition: 0.2s;
-    box-shadow: 0px 7px 0px 0px black;
+    background-color: var(--backgroundColor);
+    color: var(--footerColor);
+    box-shadow: 4px 4px 4px var(--footerColor);
 }
 
 .join-button:active {
-    box-shadow: 0px 7px 0px 0px #b6b235;
+    box-shadow: 4px 4px 4px var(--footerColor);
     transform: translateY(2px);
     -webkit-transform: translateY(2px);
     -moz-transform: translateY(2px);
@@ -83,14 +89,15 @@ span>p {
 }
 
 .section-2 {
-    margin-top: -100px;
+    margin-top: -20px;
     height: fit-content;
     display: flex;
     flex-direction: column;
+    margin-bottom: 100px;
 }
 
 .title {
-    font-size: 50px;
+    font-size: 40px;
     margin-bottom: 20px;
     margin-left: 5%;
     color: var(--footerColor);
@@ -107,7 +114,7 @@ span>p {
     justify-content: space-evenly;
 }
 
-.boxes > * {
+.boxes>* {
     background-size: 100% 100%;
     width: 550px;
     height: 350px;
@@ -115,48 +122,67 @@ span>p {
 }
 
 .mision {
-    background-image:url("../../images/mission.png");
+    background-image: url("../../images/mission.png");
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+
 }
 
 .vision {
-    background-image:url("../../images/vision.png");
+    background-image: url("../../images/vision.png");
+    margin-top: 20px;
+    margin-bottom: 20px;
+
 }
 
 .box-title {
     width: fit-content;
-    font-size: 60px;
+    font-size: 40px;
     margin-top: 15%;
     margin-left: 45%;
+    color: var(--footerColor);
 }
 
 .box-description {
     text-transform: none;
     width: fit-content;
     font-weight: 300;
-    font-size: 30px;
+    font-size: 20px;
     margin-top: 7%;
     margin-left: 35%;
     padding-right: 10%;
+    color: var(--footerColor);
 }
 
 .section-3 {
     background-color: var(--homeBoxColor);
-    padding: 20px 0 ;
+    padding: 50px 20px;
+    margin-bottom: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 20px;
+
 }
 
-.section-3 > .title {
+.section-3>.title {
     margin: 0;
     margin-left: 50px;
     color: white;
+    padding-bottom: 20px;
 }
 
-.section-3 > .description {
+.section-3>.description {
     margin: 0 70px;
     text-transform: none;
     font-weight: 300;
-    font-size:30px;
+    font-size: 20px;
+    text-align: justify;
+
 }
 
+
 .section-4 {
-    
+    margin-top: 20px;
+    margin-bottom: 100px;
 }

@@ -3,10 +3,10 @@ import axios from "axios";
 import './EmpCard.css'
 import MyModal from '../../components/my modal/MyModal.js'
 import linkedinIcon from '../../images/icons/linkedin.svg'
-import test from '/home/zaid/project-week/front-end/src/images/test.png'
-import { cloneElement } from 'react';
-import { click } from '@testing-library/user-event/dist/click';
-import { json } from 'react-router-dom';
+// import test from '/home/zaid/project-week/front-end/src/images/test.png'
+// import { cloneElement } from 'react';
+// import { click } from '@testing-library/user-event/dist/click';
+// import { json } from 'react-router-dom';
 import { useState } from "react";
 // import emp_card from '/home/zaid/project-week/front-end/src/images/emp_card.png'
 export default function EmpCard({ isUpdate, clickedCard }) {
@@ -37,7 +37,7 @@ export default function EmpCard({ isUpdate, clickedCard }) {
     const errorMessage = "Card already added to favorite"
     const sucessHeading = "Done"
     const errorHeading = "Failed"
-    function save(data) {localStorage.setItem(key, JSON.stringify(data));}
+    function save(data) { localStorage.setItem(key, JSON.stringify(data)); }
     let result = localStorage.getItem(key);
     // debugger;
     if (result == null) {
