@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import TeamCard from '../team card/TeamCard.js';
 import zaid from "../../images/team images/zaid.jpeg"
 import hanan from "../../images/team images/Hanan.jpeg"
-import hassan from "/home/zaid/project-week/front-end/src/images/team images/Hassan.jpeg"
+import hassan from "../../images/team images/Hassan.jpeg"
 import rawan from "../../images/team images/Rawan.jpg"
 import roua from "../../images/team images/Roua.jpeg"
 import { Spinner } from 'react-bootstrap';
