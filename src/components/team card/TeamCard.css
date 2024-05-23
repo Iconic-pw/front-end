@@ -81,7 +81,7 @@
   font-size: 25px;
   color: black;
   margin-bottom: 40px;
-  text-transform: lowercase;
+  /* text-transform: lowercase; */
 }
 .card-back .description::first-letter{
   text-transform: uppercase;

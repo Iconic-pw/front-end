@@ -10,7 +10,7 @@ function Form() {
 
     async function onSubmit(e) {
         e.preventDefault();
-        const url = 'https://back-end-iwii.onrender.com/addNewCard';
+        const url = `${process.env.REACT_APP_serverURL}d-iwii.onrender.com/addNewCard`;
         // const image = new FormData();
         const form = e.target;
         //1. crete the obj that you wanna send

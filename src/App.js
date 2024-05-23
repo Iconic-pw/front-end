@@ -10,7 +10,6 @@ import { Routes, Route, Outlet } from "react-router-dom";
 import Category from './components/category/Category.js';
 import Favorite from './components/favorite/Favorite.js';
 import Admin from './components/Admin/Admin.js'
-import Main from './components/main/Main.js';
 
 function Layout() {
   return (

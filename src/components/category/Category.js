@@ -10,7 +10,7 @@ function Category({ category }) {
 
   const getCardsByCategory = () => {
 
-    const serverURL = `https://back-end-iwii.onrender.com/getCards/${category}`;
+    const serverURL = `${process.env.REACT_APP_serverURL}/getCards/${category}`;
     axios
       .get(serverURL)
       .then((response) => {

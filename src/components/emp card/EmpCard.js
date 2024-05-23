@@ -21,7 +21,7 @@ export default function EmpCard({ type, clickedCard }) {
   const [heading, setheading] = useState('');
 
   const updateFavorite = () => {
-    const url = `https://back-end-iwii.onrender.com/updateFavorite/${clickedCard.id}`;
+    const url = `${process.env.REACT_APP_serverURL}/updateFavorite/${clickedCard.id}`;
     const data = {
       is_fav: false,
     };
@@ -65,7 +65,7 @@ export default function EmpCard({ type, clickedCard }) {
   }
 
   const deleteCardFromDB = () => {
-    const url = `https://back-end-iwii.onrender.com/deleteCard/${clickedCard.id}`;
+    const url = `${process.env.REACT_APP_serverURL}/deleteCard/${clickedCard.id}`;
     //   const data = {
     //     is_fav: isUpdate,
     //   };

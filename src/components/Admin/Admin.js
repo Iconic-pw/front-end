@@ -16,12 +16,12 @@ function Admin() {
     // };
 
     const getCards = async ()=>{
-        const url = 'https://back-end-iwii.onrender.com/getAllCards'
+        const url = `${process.env.REACT_APP_serverURL}/getAllCards`
         try {
             const response = await axios.get(url)
             setCards(response.data.filter(obj=>obj.is_fav))
         } catch (error) {
-            console.error('Login failed:', error);
+            console.error(`Login failed:`, error);
             setFlag(true);
         }
     }
@@ -29,7 +29,7 @@ function Admin() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.post('https://back-end-iwii.onrender.com/admin/login', { password: password });
+            const response = await axios.post(`${process.env.REACT_APP_serverURL}/admin/login`, { password: password });
             if (response.data.success) {
                 setIsLoggedIn(true);
                 setPassword("")

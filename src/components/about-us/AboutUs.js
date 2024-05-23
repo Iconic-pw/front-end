@@ -17,7 +17,7 @@ export default function AboutUs() {
     // Dynamically import images
 
     const getOurData = async () => {
-        const serverURL = `https://back-end-iwii.onrender.com/getOurCards`;
+        const serverURL = `${process.env.REACT_APP_serverURL}/getOurCards`;
 
         try {
             const response = await axios
