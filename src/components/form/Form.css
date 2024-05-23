@@ -89,6 +89,7 @@ select selected {
 .custom-file-upload {
     display: inline-block;
     padding: 10px 20px;
+    width: fit-content;
     cursor: pointer;
     background-color: var(--footerFontColor);
     color: white;
@@ -108,7 +109,7 @@ select selected {
 
 #fileName {
     margin-left: 10px;
-    display: inline;
+    display: inline-block;
     color: black;
     font-size: 20px;
 }
@@ -123,22 +124,22 @@ button {
     margin-right: 10px;
 }
 
-button[type="button"] {
+#cancel {
     background-color: transparent;
     color: #000;
 }
 
-button[type="button"]:hover {
+#cancel:hover {
     background-color: var(--second-color, #1A1AFF);
     color: black;
 }
 
-button[type="submit"] {
+#form-submit {
     background-color: var(--main-color, #00004D);
     color: #fff;
 }
 
-button[type="submit"]:hover {
+#form-submit:hover {
     background-color: var(--second-color, #1A1AFF);
     color: var(--main-color, #00004D);
 }

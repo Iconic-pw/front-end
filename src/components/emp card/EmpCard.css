@@ -1,16 +1,17 @@
-.emp-card > .first-layer>.second-layer {
+.emp-card #cover-entire-card {
   background-image: url('../../images/emp_card.png');
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .first-layer {
   height: 500px;
   width: 320px;
-  background-image: url('../../images/test.png');
-  background-size: contain;
-  background-repeat: no-repeat;
   overflow: hidden;
   display: flex;
   align-self: flex-start;
+  background-size: contain;
+  background-repeat: no-repeat;
   /* margin: 0 10px 20px; */
   border-radius: 65px;
   -webkit-border-radius: 65px;
@@ -19,15 +20,20 @@
   -o-border-radius: 65px;
 }
 
-.second-layer {
-  height: 100%;
+#cover-entire-card {
+  position: relative;
   width: 100%;
-  display: flex;
-  padding-left: 57px;
+  height: 100%;
+  /* display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: space-evenly; */
+}
 
+.emp-card .second-layer {
+  /* height: ; */
+  padding-left: 70px;
+  margin-top: 85%;
+  /* margin-bottom: 5%; */
   background-size: 100% 100%;
 
 }
@@ -35,7 +41,7 @@
 .text {
   font-family: "Akshar";
   padding: 0 10px;
-  margin-top: 250px;
+  margin-top: 170px;
   width: fit-content;
   width: -moz-fit-content;
   height: fit-content !important;
@@ -77,16 +83,40 @@
 }
 
 .emp-buttons {
-  display: flex;
-  justify-content: space-around;
+  position: absolute;
+  bottom: 10px;
+  /* right: 15%; */
+  margin: 0 auto;
+  width: fit-content;
+  /* display: flex; */
+  /* justify-content: space-around; */
 }
 
-.add-to-favorite-btn{
+.add-to-favorite-btn {
   background-color: var(--footerFontColor);
   padding: 5px 15px;
 }
 
-.add-to-favorite-btn,.delete-from-favorite-btn {
+
+
+.delete-from-favorite-btn {
+  background-color: red;
+
+}
+
+.approve-btn {
+  background-color: green;
+  /* color: white; */
+}
+
+.approve-btn,
+.delete-from-favorite-btn {
+  padding: 5px 15px;
+}
+
+.add-to-favorite-btn,
+.delete-from-favorite-btn,
+.approve-btn {
   font-size: 20px;
   border-radius: 20px;
   -webkit-border-radius: 20px;
@@ -95,10 +125,6 @@
   -o-border-radius: 20px;
 }
 
-.delete-from-favorite-btn {
-  background-color: red;
-  padding: 0px 15px ;
-}
 
 .linkedin-icon {
   width: 50px;

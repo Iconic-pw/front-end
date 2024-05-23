@@ -9,26 +9,31 @@ import { click } from '@testing-library/user-event/dist/click';
 import { json } from 'react-router-dom';
 import { useState } from "react";
 // import emp_card from '/home/zaid/project-week/front-end/src/images/emp_card.png'
-export default function EmpCard({ isFavorite, clickedCard }) {
-
+export default function EmpCard({ type, clickedCard }) {
+  /*
+    type values:
+    1: category
+    2: favorite
+    3: admin
+  */
   const [flag, setFlag] = useState(false);
   const [message, setMessage] = useState('');
   const [heading, setheading] = useState('');
 
-  // const updateFavorite = () => {
-  //   const url = `https://back-end-iwii.onrender.com/updateFavorite/${clickedCard.id}`;
-  //   const data = {
-  //     is_fav: isUpdate,
-  //   };
-  //   axios
-  //     .put(url, data)
-  //     .then((response) => {
-  //       console.log(response);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // }
+  const updateFavorite = () => {
+    const url = `https://back-end-iwii.onrender.com/updateFavorite/${clickedCard.id}`;
+    const data = {
+      is_fav: false,
+    };
+    axios
+      .put(url, data)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
 
   const key = 'favs';
 
@@ -59,7 +64,21 @@ export default function EmpCard({ isFavorite, clickedCard }) {
     setFlag(true);
   }
 
-  const deleteCard = () => {
+  const deleteCardFromDB = () => {
+    const url = `https://back-end-iwii.onrender.com/deleteCard/${clickedCard.id}`;
+    //   const data = {
+    //     is_fav: isUpdate,
+    //   };
+    axios.delete(url)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
+  const deleteCardFromLocalStorage = () => {
     let result = JSON.parse(localStorage.getItem(key));
     const updatedData = result.filter(obj => obj.id !== clickedCard.id);
     localStorage.setItem(key, JSON.stringify(updatedData));
@@ -72,23 +91,34 @@ export default function EmpCard({ isFavorite, clickedCard }) {
 
   return (<div className="emp-card">
     <div className="first-layer" style={{ backgroundImage: `url(${clickedCard.img})` }}>
-      <div className="second-layer">
-        <div className="text">
-          <p class='card-name'> {clickedCard.card_name}
-          </p>
-          <p class='job-title'>{clickedCard.job_title}</p>
-          <p class='level'>{clickedCard.card_level}</p>
+      <div id="cover-entire-card">
+        <div className="second-layer">
+          <div className="text">
+            <p class='card-name'> {clickedCard.card_name}
+            </p>
+            <p class='job-title'>{clickedCard.job_title}</p>
+            <p class='level'>{clickedCard.card_level}</p>
+          </div>
         </div>
-        <div class='emp-buttons'>
+        <div class='emp-buttons' style={{right:type==1?"15%":type==3?"7%":"24%"}}>
           <a href={clickedCard.portfolio}><img class='linkedin-icon' src={linkedinIcon} /></a>
           {
-            !isFavorite && <button className="add-to-favorite-btn" onClick={saveToLocalStorage}>Add to favorite</button>
+            type == 1 && <button className="add-to-favorite-btn" onClick={saveToLocalStorage}>Add to favorite</button>
           }
           {
-           isFavorite && <button className="delete-from-favorite-btn" onClick={deleteCard}>Delete</button> 
+            type == 2 && <button className="delete-from-favorite-btn" onClick={deleteCardFromLocalStorage}>Delete</button>
+          }
+          {
+            type == 3 &&
+             <button className="delete-from-favorite-btn" onClick={deleteCardFromDB}>Delete</button>
+          }
+          {
+            type == 3 &&
+            <button className="approve-btn" onClick={updateFavorite}>Approve</button>
           }
         </div>
       </div>
+
     </div>
     <MyModal show={flag} onHide={handleCloseModal} message={message} heading={heading} />
   </div>)

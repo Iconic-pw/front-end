@@ -1,10 +1,8 @@
 import axios from "axios";
 import './TeamCard.css'
-import linkedinIcon from '../../images/icons/linkedin.svg'
-import test from '/home/zaid/project-week/front-end/src/images/test.png'
-import testTeam from "/home/zaid/project-week/front-end/src/images/team test.jpeg"
-export default function TeamCard() {
-
+import linkedinIcon from '../../images/icons/Linkedin-team.png'
+// import test from '/home/zaid/project-week/front-end/src/images/test.png'
+export default function TeamCard({ imageUrl, card }) {
   const updateFavorite = () => {
     // const url = `https://back-end-iwii.onrender.com/updateFavorite/${clickedCard.id}`;
     const url = '';
@@ -21,20 +19,29 @@ export default function TeamCard() {
       });
   };
 
-  return (<div class='team-card'>
-    <div className="first-layer" style={{ backgroundImage: `` }}>
-      <div className="second-layer">
-        {/* <div className="text">
-          <p class='card-name'> Zaid Rajab
-          </p>
-          <p class='job-title'>Xyz</p>
-          <p class='level'>ABC</p>
+  return (
+
+    // <div class='team-card' key={card.id}>
+    //   <div className="first-layer" style={{ backgroundImage: `url(${imageUrl})` }}>
+    //     <div className="second-layer">
+    //       <div class='card-name'>{card.my_name}</div>
+    //     </div>
+    //   </div>
+    // </div>
+    <div className='team-card'>
+      <div className="card-inner">
+        <div className="first-layer" style={{ backgroundImage: `url(${imageUrl})` }}>
+          <div className="second-layer">
+            <div className='card-name'>{card.my_name}</div>
+          </div>
         </div>
-        <div class='emp-buttons'>
-          <a href='http://facebook.com'><img class='linkedin-icon' src={linkedinIcon} /></a>
-          <button>Add to favorite</button>
-        </div> */}
+        <div className="card-back">
+          <div className="description">{card.describtion}</div>
+          <a href={card.portfolio} className="portfolio" target="_blank" rel="noopener noreferrer">
+            <img class='linkedin-icon' src={linkedinIcon} />
+          </a>
+        </div>
       </div>
     </div>
-  </div>)
+  )
 }

@@ -1,5 +1,15 @@
 /* Admin.css */
 
+.admin-main {
+    width: 100%;
+    height: 100%;
+    background-color: #eee;
+    display: flex;
+    padding: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .admin-containar {
     width: 100%;
     max-width: 400px;
@@ -7,27 +17,43 @@
     padding: 20px;
     box-shadow: 4px 4px 8px var(--second-color);
     border-radius: 20px;
-    background-color: white;
+    background-color:#aaa;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
 }
 
-form {
+#login-form {
     display: flex;
     flex-direction: column;
+    position: relative; /* Added for positioning the show password button */
 }
 
-label {
+#password-label,#password-field {
+    color:  black;
+}
+
+
+#password-field {
+    padding: 10px;
     font-weight: bold;
     margin-bottom: 5px;
-}
-
-input[type="text"] {
-    padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 20px;
     width: 100%;
     box-sizing: border-box;
+}
+
+.show-password-button {
+    margin-top: -25px;
+    margin-right: -240px;
+    background-color: transparent;
+    border: none;
+    color: black;
+    cursor: pointer;
 }
 
 .btn-admin {
@@ -38,13 +64,16 @@ input[type="text"] {
     color: white;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-shadow: 4px 4px 0px #F2F4F5;
+    transition: 0.1s;
+    -webkit-transition: 0.1s;
+    -moz-transition: 0.1s;
+    -ms-transition: 0.1s;
+    -o-transition: 0.1s;
 }
 
 .btn-admin:hover {
-    background-color: #fff;
+    background-color: var(--footerFontColor);
+    color: white !important;
     color: var(--second-color);
-    border: 1px solid #1E3A8A;
-
+    border: 3px solid #1E3A8A;
 }

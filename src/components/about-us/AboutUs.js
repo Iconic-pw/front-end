@@ -4,27 +4,36 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import TeamCard from '../team card/TeamCard.js';
+import zaid from "../../images/team images/zaid.jpeg"
+import hanan from "../../images/team images/Hanan.jpeg"
+import hassan from "/home/zaid/project-week/front-end/src/images/team images/Hassan.jpeg"
+import rawan from "../../images/team images/Rawan.jpg"
+import roua from "../../images/team images/Roua.jpeg"
+import { Spinner } from 'react-bootstrap';
 
 export default function AboutUs() {
     const [ourData, setOurData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-  
-    const getOurData = () => {
-      const serverURL = `https://back-end-iwii.onrender.com/getOurCards`;
-      axios
-        .get(serverURL)
-        .then((response) => {
-          setOurData(response.data);
-          setIsLoading(false);
-        })
-        .catch((error) => {
-          console.log(error);
-          setIsLoading(false);
-        });
+    // Dynamically import images
+
+    const getOurData = async () => {
+        const serverURL = `https://back-end-iwii.onrender.com/getOurCards`;
+
+        try {
+            const response = await axios
+                .get(serverURL)
+            setOurData(response.data);
+            console.log("ourData : ", ourData)
+        } catch (e) {
+            console.log(e);
+        } finally {
+            setIsLoading(false);
+        }
+
     };
-  
+    // 142
     useEffect(() => {
-      getOurData();
+        getOurData();
     }, []);
 
     return (<>
@@ -52,11 +61,19 @@ export default function AboutUs() {
         <div className='section-4'>
             <p className='title'>our team members </p>
             <div className='team-cards'>
-                <TeamCard/>
-                <TeamCard/>
-                <TeamCard/>
-                <TeamCard/>
-                <TeamCard/>
+                {isLoading && <Spinner className="my-spinner" animation="border" />}
+                {
+                    !isLoading && <>
+                        <TeamCard imageUrl={zaid} card={ourData[0]} />
+                        <TeamCard imageUrl={hassan} card={ourData[4]} />
+                        <TeamCard imageUrl={hanan} card={ourData[1]} />
+
+                        <TeamCard imageUrl={rawan} card={ourData[2]} />
+                        <TeamCard imageUrl={roua} card={ourData[3]} />
+                    </>
+                    // ourData.map(obj => <TeamCard card={obj} key={obj.id} />)
+                }
+
             </div>
         </div>
     </>

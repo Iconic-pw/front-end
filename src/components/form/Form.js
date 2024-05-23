@@ -64,9 +64,9 @@ function Form() {
                     <label htmlFor="category">Category:</label><br />
                     <select id="category" name="category" required>
                         <option value="" selected >Choose Your Category</option>
-                        <option value="1">Programming</option>
-                        <option value="2">Visual Arts</option>
-                        <option value="3">Digital Marketing</option>
+                        <option value="programming">Programming</option>
+                        <option value="visual arts">Visual Arts</option>
+                        <option value="digital marketing">Digital Marketing</option>
                     </select><br /><br />
 
                     <label htmlFor="job_title">Job Title:</label><br />
@@ -99,10 +99,10 @@ function Form() {
 
 
                     <div class="button-container">
-                        <button type="button">Cancel</button>
+                        <button type="button" id='cancel'>Cancel</button>
 
                         {
-                            !isLoading && <button type="submit">Submit</button>
+                            !isLoading && <button type="submit" id='form-submit'>Submit</button>
                         }
                         {
                             isLoading && <Spinner animation="border" />

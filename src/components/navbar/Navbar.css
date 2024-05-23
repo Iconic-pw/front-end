@@ -14,11 +14,7 @@ nav {
     z-index: 100;
 }
 
-<<<<<<< HEAD
 .logo > img {
-=======
-.logo>img {
->>>>>>> hanan
     margin-top: 10px;
     width: 100px;
 }
@@ -43,20 +39,12 @@ a {
     align-items: center;
 }
 
-<<<<<<< HEAD
 .inner-nav > * {
-=======
-.inner-nav>* {
->>>>>>> hanan
     cursor: pointer;
     padding: 14px 16px;
 }
 
-<<<<<<< HEAD
 .inner-nav > *:hover {
-=======
-.inner-nav>*:hover {
->>>>>>> hanan
     color: var(--footerFontColor);
 }
 
